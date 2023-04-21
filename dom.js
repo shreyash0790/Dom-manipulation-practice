@@ -15,10 +15,16 @@ headertitle.textContent='New parts';
 
 
 
-var newhead=(document.getElementsByClassName('list-group-item'));
-console.log(newhead);
-for(var i=0;i<newhead.length;i++){
-    newhead[i].style.fontWeight='bold';
-}
-newhead[2].style.backgroundColor='green';
+// var newhead=(document.getElementsByClassName('list-group-item'));
+// console.log(newhead);
+// for(var i=0;i<newhead.length;i++){
+//     newhead[i].style.fontWeight='bold';
+// }
+// newhead[2].style.backgroundColor='green';
 
+var li=document.getElementsByTagName('li');
+console.log(li);
+for(var i=0;i<li.length;i++){
+    li[i].style.fontWeight='bold';
+}
+li[3].style.backgroundColor='green';
