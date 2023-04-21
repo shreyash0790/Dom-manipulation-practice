@@ -5,14 +5,20 @@ console.log(document.forms);
 console.log(document.links);
 
 var headertitle=(document.getElementById('header-title'));
-console.log(headertitle);
 headertitle.textContent='New parts';
-headertitle.innertext='Goodbye';
+// headertitle.innertext='Goodbye';
 
-headertitle.innerHTML='<h3>New Parts</h3>';
-var header =(document.getElementById('main-header'));
-header.style.borderBottom='solid 3px #965';
-var newhead=(document.getElementsByClassName('title'));
+// headertitle.innerHTML='<h3>New Parts</h3>';
+// var header =(document.getElementById('main-header'));
+// header.style.borderBottom='solid 3px #965';
+
+
+
+
+var newhead=(document.getElementsByClassName('list-group-item'));
 console.log(newhead);
-newhead[0].style.fontWeight='bold';
-newhead[0].style.backgroundColor='green';
+for(var i=0;i<newhead.length;i++){
+    newhead[i].style.fontWeight='bold';
+}
+newhead[2].style.backgroundColor='green';
+
