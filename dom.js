@@ -145,7 +145,7 @@ function addItem(e){
   e.preventDefault();
 
   // Get input value
-  var newItem = document.getElementById('item').value;
+  var newItem = document.getElementById('item').value +" "+ document.getElementById('dis').value;
 
   // Create new li element
   var li = document.createElement('li');
@@ -207,10 +207,22 @@ function filterItems(e){
   // Convert to an array
   Array.from(items).forEach(function(item){
     var itemName = item.firstChild.textContent;
+    
     if(itemName.toLowerCase().indexOf(text) != -1){
       item.style.display = 'block';
     } else {
       item.style.display = 'none';
     }
   });
+
+  Array.from(items).forEach(function(dis){
+    var itemdis = dis.firstChild.textContent;
+    
+    if(itemdis.toLowerCase().indexOf(text) != -1){
+      dis.style.display = 'block';
+    } else {
+      dis.style.display = 'none';
+    }
+  });
 }
+
